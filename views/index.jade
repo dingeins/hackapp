@@ -4,7 +4,7 @@ block content
   .container
   
     .col-md-12
-      .jumbotron
+        img.center-block(src='../imgs/logo.png', alt='Img0')
         h1.text-center= 'COOL-PAIR.NET'
         p.text-center= 'Find the match'
     
@@ -18,21 +18,13 @@ block content
             li(data-target='#carousel-example-generic', data-slide-to='2')
           
           .carousel-inner(role='listbox')
-            .item
-              img(src='https://sickr.files.wordpress.com/2013/01/pokemon.jpg', alt='Img1')
-              .carousel-caption
-                h3='Slide 1'
-                p='Content 1'
             .item.active
-              img(src='http://media.japanpowered.com/images/pikachu-raichu.jpg', alt='Img2')
-              .carousel-caption
-                h3='Slide 2'
-                p='Content 2'
+              img.center-block(src='../imgs/1.jpg', alt='Img1')
             .item
-              img(src='http://img03.deviantart.net/0e98/i/2013/320/4/b/all_pokemon_starters_inflated_by_selphy6-d6ufyo6.png', alt='Img3')
-              .carousel-caption
-                h3='Slide 3'
-                p='Content 3'
+              img.center-block(src='../imgs/2.jpg', alt='Img2')
+            .item
+              img.center-block(src='../imgs/3.jpg', alt='Img3')
+
           
           a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
             span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
@@ -49,8 +41,8 @@ block content
           
     #results(style='display: none;')
        .col-md-12
-         img.img-responsive(src='http://www.literalindia.com/wp-content/uploads/2015/04/results.jpg', alt='Result')
-       
+         img.center-block.img-responsive(src='http://www.literalindia.com/wp-content/uploads/2015/04/results.jpg', alt='Result')
+      
        .col-md-12
          .jumbotron
            button.btn.btn-default.center-block#tryAnotherBtn= 'Try another photo'
