@@ -41,4 +41,14 @@ p.text-center {
   border-radius: 0;
   font-family:18px  "Segoe UI Light"!important;
   font-color:white!important;
+  margin-bottom: 10px;
+}
+
+.rect {
+  left: 200px; 
+  top: 36%; 
+  width: 50px; 
+  height: 50px; 
+  border: 1px solid white; 
+  position: absolute;
 }
