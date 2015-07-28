@@ -40,8 +40,12 @@ block content
           p.text-center= 'P.S. We don\'t keep the photo'
           
     #results(style='display: none;')
-       .col-md-12
-         img.img-responsive.center-block#uploadedImage(src='http://www.literalindia.com/wp-content/uploads/2015/04/results.jpg', alt='Result')
+       .col-md-12#resultDiv
+         img.img-responsive.center-block#uploadedImage(alt='Result')
+         img.img-responsive#tag1(src='/imgs/tag.png', style='display: none;')
+         img.img-responsive#tag2(src='/imgs/tag2.png', style='display: none;')
+         #rect1
+         #rect2
        .col-md-12
          .jumbotron
            button.btn.btn-default.center-block#tryAnotherBtn= 'Try another photo'

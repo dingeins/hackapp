@@ -4,14 +4,16 @@ var https = require('https');
 var router = express.Router();
 
 router.post('/', function (req, res) {
-  var data = new Buffer('', 'binary');
+  var binaryData = '';
   req.on('data', function (chunk) {
-    data = Buffer.concat([data, chunk]);
+    binaryData = binaryData.concat(chunk);
   });
   req.on('end', function () {
+    var buf = new Buffer(binaryData, 'binary');
+
     var options = {
       host: 'api.projectoxford.ai',
-      path: "/face/v0/detections?analyzesFaceLandmarks=true&analyzesAge=true&analyzesGender=true&analyzesHeadPose=false",
+      path: "/face/v0/detections?analyzesFaceLandmarks=false&analyzesAge=true&analyzesGender=true&analyzesHeadPose=false",
       method: 'POST',
       headers: { 'Content-Type': 'application/octet-stream', 'Ocp-Apim-Subscription-Key': 'dd8c434e62ec4a2fb0b7373c2a3ab9ad' }
     };
@@ -25,12 +27,30 @@ router.post('/', function (req, res) {
 
       response.on("end", function () {
         var faces = JSON.parse(body);
-        res.send(JSON.stringify(faces));
+        var first=0;
+        var second=0;
+        var min = 200;
+        
+        for (var i = 0; i < faces.length; i++) {
+          var face1 = faces[i];
+          for (var j = i+1; j < faces.length; j++) {
+            var face2 = faces[j];
+            var ageDiff = Math.abs(face1.attributes.age - face2.attributes.age)
+            if(ageDiff < min){
+              min = ageDiff;
+              first = i;
+              second = j;
+            }
+          }
+        }
+        
+        var result = new Array(faces[first], faces[second]);
+        res.send(JSON.stringify(result));
       });
     });
 
     // End the request
-    request.write(data);
+    request.write(buf);
     request.end();
   });
 });
