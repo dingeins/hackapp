@@ -19,11 +19,11 @@ block content
           
           .carousel-inner(role='listbox')
             .item.active
-              img.center-block(src='../imgs/1.jpg', alt='Img1')
+              img.center-block(src='../imgs/f-01.jpg', alt='Img1')
             .item
-              img.center-block(src='../imgs/2.jpg', alt='Img2')
+              img.center-block(src='../imgs/f-02.jpg', alt='Img2')
             .item
-              img.center-block(src='../imgs/3.jpg', alt='Img3')
+              img.center-block(src='../imgs/f-03.jpg', alt='Img3')
 
           
           a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
@@ -48,4 +48,14 @@ block content
          #rect2
        .col-md-12
          .jumbotron
+           button.btn.btn-default.center-block#findMoreBtn= 'Make interesting pics'
            button.btn.btn-default.center-block#tryAnotherBtn= 'Try another photo'
+
+    #diy(style='display: none;')
+       .col-md-12
+         img.center-block#select-image(src='../imgs/f-03.jpg')
+
+       .col-md-12
+         .jumbotron
+           button.btn.btn-default.center-block#backBtn= 'Back to result'
+           button.btn.btn-default.center-block#tryAnotherBtn2= 'Try another photo' 

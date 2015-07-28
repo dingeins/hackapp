@@ -4,6 +4,8 @@ $('#uploadBtn').change(function(){
 	
 	base64Reader.onloadend = function(){
 		$('#uploadedImage').attr('src', base64Reader.result);
+		$('#face1').attr('display',block);
+		$('#face2').attr('display',block);
 	}
 	binaryReader.onloadend = function(){
 		$.ajax({
@@ -56,3 +58,18 @@ $('#tryAnotherBtn').click(function(){
 	$('#select-image').attr('style', 'display: block;');
 	$('#results').attr('style', 'display: none;');
 });
+
+$('#findMoreBtn').click(function(){
+	$('#diy').attr('style', 'display: block;');
+	$('#results').attr('style', 'display: none;');
+});
+
+$('#backBtn').click(function(){
+	$('#results').attr('style', 'display: block;');
+	$('#diy').attr('style', 'display: none;');
+});
+
+$('#tryAnotherBtn2').click(function(){
+	$('#select-image').attr('style', 'display: block;');
+	$('#diy').attr('style', 'display: none;');
+}); 
