@@ -12,8 +12,6 @@ $('#uploadBtn').change(function(){
 		$.ajax({
 			type: "POST",
 			url: '/analyze',
-			// data: JSON.stringify({"user": "me"}),
-			// contentType: 'application/json',
 			data: event.target.result,
 			contentType: 'application/octet-stream',
 			success: function(data){

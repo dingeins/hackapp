@@ -4,7 +4,7 @@ var https = require('https');
 var router = express.Router();
 
 router.post('/', function (req, res) {
-  var data = new Buffer('');
+  var data = new Buffer('', 'binary');
   req.on('data', function (chunk) {
     data = Buffer.concat([data, chunk]);
   });

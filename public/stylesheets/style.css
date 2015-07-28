@@ -1,13 +1,44 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #00BFFF !important;
+  padding:10px 30px 30px 30px;
+  font-family:12px  "Segoe UI Light";
+  background-color: #9ee3e8 !important;
+}
+
+#select-image{
+  width: 60%; 
+  margin: auto;
 }
 
 a {
   color: #00B7FF;
 }
 
-.jumbotron{
-  background-color: #00BFFF !important;
+h1.text-center {
+  font-family: "Segoe UI Light";
+  color: white; 
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+p.text-center {
+  font-family: "Segoe UI Light";
+  color: white;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.jumbotron {
+  background-color: #9ee3e8 !important;
+}
+
+.jumbotron p{
+  font-size: 18px !important;
+}
+
+.jumbotron button{
+  background-color: rgb(174, 117, 11);
+  border-radius: 0;
+  font-family:18px  "Segoe UI Light"!important;
+  font-color:white!important;
 }
