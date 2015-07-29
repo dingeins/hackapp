@@ -15,6 +15,8 @@ $('#uploadBtn').change(function () {
 				R.setRequestHeader("Arr-Disable-Session-Affinity", "True");
 			},
 			success: function (data) {
+				window.cookie = null;
+				
 				$('#loadingImage').attr('style', 'display: none;');
 				
 				var faces = JSON.parse(data);
