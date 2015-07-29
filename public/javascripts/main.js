@@ -1,5 +1,6 @@
 $('#uploadBtn').change(function () {
 	$.cookie('session', null);
+	window.cookie = null;
 	
 	var binaryReader = new FileReader();
 	var base64Reader = new FileReader();
