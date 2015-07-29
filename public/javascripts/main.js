@@ -15,6 +15,7 @@ $('#uploadBtn').change(function () {
 				$('#loadingImage').attr('style', 'display: none;');
 				
 				var faces = JSON.parse(data);
+				alert(data);
 
 				window.face0Left = faces[0].faceRectangle.left;
 				window.face0Top = faces[0].faceRectangle.top;
@@ -24,9 +25,6 @@ $('#uploadBtn').change(function () {
 				window.face1Top = faces[1].faceRectangle.top;
 				window.face1Width = faces[1].faceRectangle.width;
 				window.face1Height = faces[1].faceRectangle.height;
-				
-				alert(window.face0Left, window.face0Top, window.face0Width, window.face0Height);
-				alert(window.face1Left, window.face1Top, window.face1Width, window.face1Height);
 
 				var image = document.getElementById('uploadedImage');
 				var imageWidth = image.clientWidth;
