@@ -1,5 +1,5 @@
 $('#uploadBtn').change(function () {
-	$.cookie('ARRAffinity', null);
+	$.cookie('session', null);
 	
 	var binaryReader = new FileReader();
 	var base64Reader = new FileReader();
