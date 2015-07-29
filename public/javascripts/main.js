@@ -12,6 +12,8 @@ $('#uploadBtn').change(function () {
 			data: binaryReader.result,
 			contentType: 'application/octet-stream',
 			success: function (data) {
+				$('#loadingImage').attr('style', 'display: none;');
+				
 				var faces = JSON.parse(data);
 
 				window.face0Left = faces[0].faceRectangle.left;
@@ -60,6 +62,7 @@ $('#uploadBtn').change(function () {
 });
 
 $('#tryAnotherBtn').click(function () {
+	$('#loadingImage').attr('style', 'display: block;');
 	$('#rect1').attr('style', 'display: none;');
 	$('#rect2').attr('style', 'display: none;');
 	$('#tag1').attr('style', 'display: none;');

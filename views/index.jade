@@ -40,6 +40,8 @@ block content
           p.text-center= 'P.S. We don\'t keep the photo'
           
     #results(style='display: none;')
+       .col-md-12
+         img.img-responsive.center-block#loadingImage(src='/imgs/loading.gif', alt='Loading')
        .col-md-12#resultDiv
          img.img-responsive.center-block#uploadedImage(alt='Result')
          img.img-responsive#tag1(src='/imgs/tag.png', style='display: none;')
