@@ -1,5 +1,4 @@
 var express = require('express');
-var binary = require('binary');
 var https = require('https');
 var router = express.Router();
 

@@ -15,7 +15,6 @@ $('#uploadBtn').change(function () {
 				$('#loadingImage').attr('style', 'display: none;');
 				
 				var faces = JSON.parse(data);
-				alert(data);
 
 				window.face0Left = faces[0].faceRectangle.left;
 				window.face0Top = faces[0].faceRectangle.top;
