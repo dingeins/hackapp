@@ -1,7 +1,4 @@
 $('#uploadBtn').change(function () {
-	$.cookie('session', null);
-	window.cookie = null;
-	
 	var binaryReader = new FileReader();
 	var base64Reader = new FileReader();
 
@@ -14,6 +11,9 @@ $('#uploadBtn').change(function () {
 			url: '/analyze',
 			data: binaryReader.result,
 			contentType: 'application/octet-stream',
+			beforeSend: function(R){
+				R.setRequestHeader("Arr-Disable-Session-Affinity", "True");
+			},
 			success: function (data) {
 				$('#loadingImage').attr('style', 'display: none;');
 				
