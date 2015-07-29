@@ -62,6 +62,7 @@ $('#uploadBtn').change(function () {
 });
 
 $('#tryAnotherBtn').click(function () {
+	$('#uploadBtn').attr('value', '');
 	$('#loadingImage').attr('style', 'display: block;');
 	$('#rect1').attr('style', 'display: none;');
 	$('#rect2').attr('style', 'display: none;');
@@ -82,6 +83,7 @@ $('#backBtn').click(function () {
 });
 
 $('#tryAnotherBtn2').click(function () {
+	$('#uploadBtn').attr('value', '');
 	$('#select-image').attr('style', 'display: block;');
 	$('#diy').attr('style', 'display: none;');
 });
